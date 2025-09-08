@@ -106,6 +106,7 @@
     }
 
     attempts++;
+    guessInput.value = "";
     // reveal guess into digit boxes and color them
     const secretArr = secret.split("");
     const guessArr = guess.split("");
