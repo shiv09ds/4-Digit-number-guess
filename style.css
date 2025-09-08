@@ -27,7 +27,7 @@ html,body{height:100%;margin:0;background:linear-gradient(180deg,#dff4ff,#b7e0f5
 .rules-panel li::before{content:"✦";margin-right:8px;color:#3ba9f7}
 
 /* Wrap & panel */
-.wrap{min-height:100%;display:grid;place-items:center;padding:100px 20px 40px}
+.wrap{min-height:100%;display:grid;place-items:center;}
 .panel{width:min(620px,94vw);background:#ffffffcc;border-radius:20px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,0.12);backdrop-filter:blur(6px);text-align:center}
 
 /* Secret + boxes */
