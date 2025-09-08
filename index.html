@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>4-Digit Winter Guessing Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="navbar">
+    <h1>Guess Game ❄️</h1>
+    <button id="rulesBtn" class="game-btn">Rules</button>
+  </div>
+
+  <div class="rules-panel" id="rulesPanel" aria-hidden="true">
+    <h3>How to Play</h3>
+    <ul>
+      <li>You have 10 attempts to guess the 4-digit number.</li>
+      <li> Correct digit & right place → <span style="color:#00c853">Green</span>.</li>
+      <li> Correct digit but wrong place → <span style="color:#c79300">Yellow</span>.</li>
+      <li>Digit not in number → <span style="color:#ff1744">Red</span>.</li>
+      <li>Correct digits will reveal above in the hidden number.</li>
+    </ul>
+  </div>
+
+  <div class="wrap">
+    <div class="panel">
+      <h2>Guess the 4-Digit Number</h2>
+
+      <div class="secret" aria-hidden="true">
+        <div class="secret-box" id="secret0">*</div>
+        <div class="secret-box" id="secret1">*</div>
+        <div class="secret-box" id="secret2">*</div>
+        <div class="secret-box" id="secret3">*</div>
+      </div>
+
+      <div class="boxes" aria-hidden="true">
+        <div class="digit-box" id="box0"></div>
+        <div class="digit-box" id="box1"></div>
+        <div class="digit-box" id="box2"></div>
+        <div class="digit-box" id="box3"></div>
+      </div>
+
+      <!-- readonly so only virtual keyboard can fill it -->
+      <input id="guessInput" type="text" maxlength="4" placeholder="____" readonly />
+
+      <div class="controls">
+        <button id="checkBtn" class="game-btn" title="Check Guess">Check Guess</button>
+        <button id="refreshBtn" class="game-btn" title="Refresh Game">Refresh Game</button>
+      </div>
+
+      <div class="tries" id="triesLeft">Attempts left: 10</div>
+
+      <!-- keyboard will be injected here by JS -->
+    </div>
+  </div>
+
+  <!-- Result Panel (winter-themed) -->
+  <div class="result-panel" id="resultPanel" role="dialog" aria-hidden="true">
+    <h2 id="resultTitle"></h2>
+    <p id="resultMessage"></p>
+    <button id="playAgainBtn" class="game-btn">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
