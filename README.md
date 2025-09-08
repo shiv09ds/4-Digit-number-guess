@@ -66,7 +66,7 @@ Try to guess the secret 4-digit number within 10 attempts while enjoying a cozy 
 ---
 
 ## 🚀 Demo
-
+- [Click to Play](https://4digitguess.netlify.app/)
 
 
 ### 🤝 Contributing
